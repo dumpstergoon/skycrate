@@ -1,0 +1,512 @@
+:root {
+	/* Colours */
+	--star:#d7cfb9;
+	--white:#e4e4e4;
+	--off-white:#ccc;
+	--black:#1a1a1a;
+	--shadow:#101010;
+	--dark-grey:#222;
+	--grey:#4f4f4f;
+	--light-grey:#828282;
+	--pink:#f25780;
+	--red:#eb5757;
+	--orange:#F2994A;
+	--yellow:#f2c94c;
+	--green:#219653;
+	--light-green:#27ae60;
+	--blue:#2f80ed;
+	--light-blue:#56ccf2;
+
+	/* Fonts */
+	--sans:'PT Sans', 'Trebuchet MS', 'Helvetica Neue', Helvetica, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	--serif:'PT Serif', 'Georgia', 'Times New Roman', Times, serif;
+	--mono:'Ubuntu Mono', 'Courier New', Courier, monospace;
+	--display:'PT Sans Caption', 'Helvetica Neue', Helvetica, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	--brand:"Ubuntu", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*
+
+	SkyCrate Theme for skycrate.net
+
+*/
+@font-face {
+	font-family:"Ubuntu";
+	font-style:normal;
+	font-weight:200;
+	src:url('assets/ubuntu/Ubuntu-Light.ttf');
+}
+
+@font-face {
+	font-family:"Ubuntu";
+	font-style:italic;
+	font-weight:200;
+	src:url('assets/ubuntu/Ubuntu-LightItalic.ttf');
+}
+
+@font-face {
+	font-family:"Ubuntu";
+	font-style:normal;
+	font-weight:400;
+	src:url('assets/ubuntu/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+	font-family:"Ubuntu";
+	font-style:italic;
+	font-weight:400;
+	src:url('assets/ubuntu/Ubuntu-RegularItalic.ttf');
+}
+
+@font-face {
+	font-family:"Ubuntu";
+	font-style:normal;
+	font-weight:600;
+	src:url('assets/ubuntu/Ubuntu-Medium.ttf');
+}
+
+@font-face {
+	font-family:"Ubuntu";
+	font-style:italic;
+	font-weight:600;
+	src:url('assets/ubuntu/Ubuntu-MediumItalic.ttf');
+}
+
+@font-face {
+	font-family:"Ubuntu";
+	font-style:normal;
+	font-weight:800;
+	src:url('assets/ubuntu/Ubuntu-Bold.ttf');
+}
+
+@font-face {
+	font-family:"Ubuntu";
+	font-style:italic;
+	font-weight:800;
+	src:url('assets/ubuntu/Ubuntu-BoldItalic.ttf');
+}
+
+/* Monospaced Fonts. Might switch to sourcecode pro... */
+@font-face {
+	font-family:"Ubuntu Mono";
+	font-style:normal;
+	font-weight:normal;
+	src:url('assets/ubuntu/UbuntuMono-Regular.ttf');
+}
+
+@font-face {
+	font-family:"Ubuntu Mono";
+	font-style:italic;
+	font-weight:normal;
+	src:url('assets/ubuntu/UbuntuMono-RegularItalic.ttf');
+}
+
+@font-face {
+	font-family:"Ubuntu Mono";
+	font-style:normal;
+	font-weight:bold;
+	src:url('assets/ubuntu/UbuntuMono-Bold.ttf');
+}
+
+@font-face {
+	font-family:"Ubuntu Mono";
+	font-style:italic;
+	font-weight:bold;
+	src:url('assets/ubuntu/UbuntuMono-BoldItalic.ttf');
+}
+
+/* Body font sans serif - general use */
+@font-face {
+	font-family:"PT Sans";
+	font-style:normal;
+	font-weight:normal;
+	src:url('assets/pt-sans/PT_Sans-Web-Regular.ttf');
+}
+
+@font-face {
+	font-family:"PT Sans";
+	font-style:italic;
+	font-weight:normal;
+	src:url('assets/pt-sans/PT_Sans-Web-Italic.ttf');
+}
+
+@font-face {
+	font-family:"PT Sans";
+	font-style:normal;
+	font-weight:bold;
+	src:url('assets/pt-sans/PT_Sans-Web-Bold.ttf');
+}
+
+@font-face {
+	font-family:"PT Sans";
+	font-style:italic;
+	font-weight:bold;
+	src:url('assets/pt-sans/PT_Sans-Web-BoldItalic.ttf');
+}
+
+
+/* Body font serif - Useful for numbers, dates, etc. */
+@font-face {
+	font-family:"PT Serif";
+	font-style:normal;
+	font-weight:normal;
+	src:url('assets/pt-serif/PT_Serif-Web-Regular.ttf');
+}
+
+@font-face {
+	font-family:"PT Serif";
+	font-style:italic;
+	font-weight:normal;
+	src:url('assets/pt-serif/PT_Serif-Web-Italic.ttf');
+}
+
+@font-face {
+	font-family:"PT Serif";
+	font-style:normal;
+	font-weight:bold;
+	src:url('assets/pt-serif/PT_Serif-Web-Bold.ttf');
+}
+
+@font-face {
+	font-family:"PT Serif";
+	font-style:italic;
+	font-weight:bold;
+	src:url('assets/pt-serif/PT_Serif-Web-BoldItalic.ttf');
+}
+
+
+/* Header Fonts. Might be good for CTAs? */
+@font-face {
+	font-family:'PT Sans Caption';
+	font-style:normal;
+	font-weight:normal;
+	src:url('assets/pt-sans-caption/PTSansCaption-Regular.ttf');
+}
+
+@font-face {
+	font-family:'PT Sans Caption';
+	font-style:normal;
+	font-weight:bold;
+	src:url('assets/pt-sans-caption/PTSansCaption-Bold.ttf');
+}
+
+
+@keyframes spin {
+	0% {
+		transform:translate(-5vw, -5vw) rotate(0deg);
+	}
+	100% {
+		transform:translate(-5vw, -5vw) rotate(359deg);
+	}
+}
+
+@keyframes rotate-cube {
+	0% {
+		transform:translate(0, 0) rotateX(0deg) rotateY(0deg);
+	}
+	25% {
+		transform:translate(0, -10vw) rotateX(-90deg) rotateY(270deg)
+	}
+	50% {
+		transform:translate(0, 8vw) rotateX(-180deg) rotateY(520deg)
+	}
+	75% {
+		transform:translate(0, -4vw) rotateX(-270deg) rotateY(790deg)
+	}
+	100% {
+		transform:translate(0, 0vw) rotateX(-359deg) rotateY(1080deg);
+	}
+}
+
+@keyframes blink {
+	0% {
+		opacity:0
+	}
+	12% {
+		opacity:0;
+	}
+	25% {
+		opacity:1;
+	}
+	75% {
+		opacity:1;
+	}
+	87% {
+		opacity:0;
+	}
+	100% {
+		opacity:0;
+	}
+}
+
+@keyframes motionblur {
+	0% {
+		filter:blur(0);
+	}
+	50% {
+		filter:blur(2px);
+	}
+	100% {
+		filter:blur(0);
+	}
+}
+
+* {
+	transition:all 250ms ease-out 0s;
+}
+
+body {
+	background-color:var(--black);
+	color:var(--white);
+	font-family:var(--sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family:var(--display);
+	text-transform:uppercase;
+	letter-spacing:2px;
+	font-weight:900;
+}
+
+em {
+	color:var(--yellow);
+	font-style:normal;
+}
+
+button {
+	border:none;
+	background:transparent;
+	font-size:4vw;
+	padding:5pt;
+}
+
+/* TODO: change to icon */
+button img {
+	width:2em;
+	filter:invert(0.9) drop-shadow(4px 3px 0 rgba(0, 0, 0, 0.27));
+}
+
+z-view {
+	display:none;
+	opacity:0;
+	background-position:top right;
+	background-image:url('/assets/big_cloud.png'), linear-gradient(#081422, #043048);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+z-view[active=true] {
+	display:block;
+}
+
+z-view[active=false] {
+	opacity:0 !important;
+}
+
+z-view[state=updating] {
+	opacity:0.25 !important;
+	filter:blur(12px);
+}
+
+z-view[state=updated] {
+	opacity:1;
+}
+
+z-button {
+	color:var(--black);
+	font-weight:bold;
+	background-color:var(--green);
+	box-shadow:0 0 60px rgba(0, 0, 0, 0.36);
+	border-radius:5pt;
+}
+
+z-button[icon] {
+	padding-left:28pt;
+}
+
+section.home_page_tout {
+	position:relative;
+	/* box-shadow:inset 0 0 20px rgba(0, 0, 0, 0.17); */
+}
+
+sc-header sc-title {
+	font-family:var(--brand);
+	text-shadow:0.1em 0.08125em 0px rgba(0, 0, 0, 0.27);
+}
+
+sc-header sc-title::before {
+	content:">";
+	color:var(--yellow);
+}
+
+sc-header sc-title::after {
+	content:"_";
+	color:var(--yellow);
+	animation:blink 2s linear 0s infinite normal forwards;
+}
+
+sc-countdown {
+	display:block;
+	text-align:center;
+	font-family:var(--mono);
+	font-weight:normal;
+	margin:10vh 0;
+}
+
+sc-timeunit {
+	display:inline-block;
+}
+
+sc-timeunit[unit=milliseconds] .number {
+	animation:motionblur 125ms linear 0s infinite normal forwards;
+}
+
+sc-timeunit .number {
+	font-size:7vw;
+}
+
+sc-timeunit .number span {
+	position:relative;
+	display:inline-block;
+	background-color:var(--dark-grey);
+	padding:3pt 5pt;
+	border-radius:4pt;
+	margin:0 1pt;
+	box-shadow:0 0 60px rgba(255, 255, 255, 0.27);
+}
+
+sc-timeunit .number span::before {
+	content:"";
+	position:absolute;
+	display:block;
+	z-index:0;
+	top:50%;
+	left:0;
+	opacity:0.5;
+	width:100%;
+	height:50%;
+	border-top:1px solid var(--grey);
+}
+
+sc-timeunit .number::after {
+	content:":";
+	position:relative;
+	top:-0.125em;
+	font-size:0.75em;
+}
+
+sc-timeunit:last-child .number::after {
+	display:none;
+}
+
+sc-timeunit label {
+	position:relative;
+	left:-0.8em;
+	font-size:2vw;
+}
+
+sc-timeunit:last-child label {
+	left:0;
+}
+
+sc-cube {
+	position:absolute;
+	top:12.5%;
+	left:0;
+	transform:translate(-50%, -50%);
+	perspective:none;
+	perspective-origin:50% 50%;
+}
+
+sc-cube > .cube {
+	position:relative;
+	transform-style:preserve-3d;
+	width:24vw;
+	height:24vw;
+	animation:rotate-cube 120s linear 0s infinite normal forwards;
+}
+
+sc-cube > .cube > div {
+	position:absolute;
+	width:24vw;
+	height:24vw;
+
+	border:1px solid var(--white);
+	opacity:0.48;
+	box-shadow:0 0 80px rgba(242, 201, 76, 0.27), 0 0 180px rgba(255, 255, 255, 0.16);
+
+	background-color:var(--white);
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:50%;
+}
+
+sc-cube > .cube > div.front {
+	transform:translateZ(12vw);
+	/* background-image:url("assets/icons/lock.svg"); */
+}
+
+sc-cube > .cube > div.back {
+	transform:translateZ(-12vw) rotateY(180deg);
+	/* background-image:url("assets/icons/key.svg"); */
+}
+
+sc-cube > .cube > div.top {
+	transform:translateY(-12vw) rotateX(-90deg);
+	/* background-image:url("assets/icons/shield.svg"); */
+}
+
+sc-cube > .cube > div.bottom {
+	transform:translateY(12vw) rotateX(90deg);
+	/* background-image:url("assets/icons/database.svg"); */
+}
+
+sc-cube > .cube > div.left {
+	transform:translateX(-12vw) rotateY(270deg);
+	/* background-image:url("assets/icons/cpu.svg"); */
+}
+
+sc-cube > .cube > div.right {
+	transform:translateX(12vw) rotateY(-270deg);
+	/* background-image:url("assets/icons/server.svg"); */
+}
+
+sc-starfield, sc-filter {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+sc-starfield > sc-star {
+	position:absolute;
+	display:block;
+	left:var(--x);
+	top:var(--y);
+	width:var(--size);
+	height:var(--size);
+	opacity:var(--scale);
+	background-color:var(--star);
+	box-shadow:0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+sc-clouds {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:100%;
+	opacity:0.82;
+	filter:blur(2px) sepia(5);
+	background-image:url(/assets/clouds.png);
+	background-position:0px 10vh;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+sc-filter {
+	background-image:linear-gradient(rgba(235, 87, 88, 0.36), rgba(242, 87, 186, 0.22));
+	opacity:0.6;
+}

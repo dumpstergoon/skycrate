@@ -1,0 +1,125 @@
+body {
+	position:relative;
+	top:0;
+	left:0;
+	font-size:12pt;
+	width:100vw;
+	min-height:100vh;
+	margin:0;
+	padding:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:600;
+	margin:0.25em 0 0.5em;
+	padding:0;
+}
+
+h1 {
+	font-size:10vw;
+}
+
+h2 {
+	font-size:8vw;
+	font-weight:400;
+}
+
+h3 {
+	font-size:6vw;
+}
+
+h4 {
+	font-size:5vw;
+}
+
+p {
+	line-height:2em;
+	margin:2em 0;
+}
+
+z-app {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100vw;
+	height:100vh;
+	overflow:hidden;
+}
+
+sc-header {
+	position:absolute;
+	z-index:10;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:space-between;
+	align-items:center;
+	top:0;
+	left:0;
+	width:calc(100% - 20pt);
+	padding:10pt;
+}
+
+sc-header sc-title {
+	margin:0;
+	font-weight:normal;
+	font-style:normal;
+	font-weight:bolder;
+	font-size:11vw;
+}
+
+z-view {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100vw;
+	min-height:100vh;
+}
+
+z-view > article {
+	position:relative;
+	min-height:calc(100vh - 25vw - 20pt);
+	padding:25vw 5vw 10vw;
+}
+
+z-bar {
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:flex-end;
+	align-content:center;
+	margin:5vh 0;
+}
+
+z-button {
+	display:inline-block;
+	padding:7pt 10pt;
+	font-size:1.5em
+}
+
+z-button[icon] {
+	background-image:var(--url);
+	background-repeat:no-repeat;
+	background-position:7pt center;
+}
+
+z-slideshow, z-slide, z-view, z-app {
+	display:block;
+}
+
+z-slideshow {
+	position:relative;
+	height:100vw;
+}
+
+z-slide {
+	position:absolute;
+	top:0;
+	left:calc(var(--offset) * 100%);
+	transform:translate(calc(var(--offset) * 20pt), 0pt);
+	opacity:1;
+	width:100%;
+}
+
+z-slide[active=false] {
+	opacity:0.5;
+}

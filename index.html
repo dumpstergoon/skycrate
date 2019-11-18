@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="layout.css" />
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<script type="text/javascript" src="z.js"></script>
+		<script type="text/javascript" src="definitions.js"></script>
+		<script type="text/javascript" src="sc-definitions.js"></script>
+	</head>
+	<body>
+
+		<z-app name="SkyCrate">
+			<sc-header></sc-header>
+			<z-view title="SkyCrate" path="/">
+				<sc-starfield stars="100"></sc-starfield>
+				<article>
+					<sc-filter></sc-filter>
+					<section class="home_page_tout">
+						<z-slideshow>
+							<z-slide>
+								<h2>The <em>Countdown</em> has begun.</h2>
+								<sc-countdown deadline="2019-12-25"></sc-countdown>
+								<h3>
+									Be <em>the first</em> to get one of our <em>crates</em>
+									when we launch at Christmas.
+								</h3>
+								<z-bar>
+									<z-button icon="bell">Get Notified</z-button>
+								</z-bar>
+							</z-slide>
+							<z-slide>
+								<sc-cube></sc-cube>
+							</z-slide>
+						</z-slideshow>
+					</section>
+				</article>
+			</z-view>
+			<z-view title="Contact Us" path="/contact-us">
+				<article>
+					<h2>Hello, world.</h2>
+
+				</article>
+			</z-view>
+		</z-app>
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+</html>

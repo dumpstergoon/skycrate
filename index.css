@@ -251,6 +251,13 @@
 	}
 }
 
+.warning {
+	background-color:var(--red);
+	color:var(--white);
+	font-size:11pt;
+	padding:5pt 7pt;
+}
+
 * {
 	transition:all 250ms ease-out 0s;
 }
@@ -315,7 +322,7 @@ z-view[state=updated] {
 z-button {
 	color:var(--black);
 	font-weight:bold;
-	background-color:var(--green);
+	background-color:var(--white);
 	box-shadow:0 0 60px rgba(0, 0, 0, 0.36);
 	border-radius:5pt;
 }
